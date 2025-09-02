@@ -135,7 +135,7 @@ for loop in range(1):
 szCommandAddress = crt.Dialog.Prompt("Enter the address", "Provide location address", "Straat, Postcode, Plaats")
 
 for loop in range(1): 
-    if szCommandAddress == "":
+    if szCommandAddress == "" or szCommandAddress == "Straat, Postcode, Plaats":
         xlocation = ""
         break
     elif szCommandAddress != "":

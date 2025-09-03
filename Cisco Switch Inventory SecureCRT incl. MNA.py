@@ -129,13 +129,6 @@ for loop in range(1):
                     trycounter += 1
                     trycounterstr = str(trycounter)
 
-for loop in range(1): 
-    if szCommandAddress == "" or szCommandAddress == "Straat, Postcode, Plaats":
-        xlocation = ""
-        break
-    elif szCommandAddress != "":
-        xlocation = szCommandAddress
-
 # Verificatie xIterface
 if xInterface == "" or xInterface[0] == "^":
     xInterface = False

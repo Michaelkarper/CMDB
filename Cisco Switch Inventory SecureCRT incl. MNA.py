@@ -13,8 +13,6 @@ inventory = []
 inventoryLine = []
 cleaninventory = []
 
-xlocation = ""
-
 objTab = crt.GetScriptTab()
 objTab.Screen.Synchronous = True
 objTab.Screen.IgnoreEscape = True
@@ -131,9 +129,6 @@ for loop in range(1):
                     trycounter += 1
                     trycounterstr = str(trycounter)
 
-# Adres halen
-szCommandAddress = crt.Dialog.Prompt("Enter the address", "Provide location address", "Straat, Postcode, Plaats")
-
 for loop in range(1): 
     if szCommandAddress == "" or szCommandAddress == "Straat, Postcode, Plaats":
         xlocation = ""
@@ -141,7 +136,7 @@ for loop in range(1):
     elif szCommandAddress != "":
         xlocation = szCommandAddress
 
-# Verificatie xInvertface
+# Verificatie xIterface
 if xInterface == "" or xInterface[0] == "^":
     xInterface = False
 else:
@@ -198,7 +193,6 @@ file.write('"Item status",')
 file.write('"Serienummer",')
 file.write('"Product SC",')
 file.write('"Product description",')
-file.write('"Adres",')
 file.write('"Hostname",')
 file.write('"IP Adres",')
 file.write('"NAT adres",')
@@ -216,8 +210,7 @@ for line in cleaninventory:
         file.write('"' + line[4] + '",')        ## Serienummer
         file.write('"' + line[2] + '",')        ## Product SC
         file.write('"' + line[1] + '",')        ## Product description
-        file.write('"' + adres + '",')          ## Gebouw/adres
-
+        
         if hostnamecounter == 0:
             file.write('"' + xHostname + '",')  ## Hostname
         elif hostnamecounter > 0:

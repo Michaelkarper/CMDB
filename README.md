@@ -14,15 +14,12 @@ Comment language = Dutch
 
  - Adds the provided interface IP to the .csv output
 
- - Adds the provided address to the .csv output
-
  - Adds the IP address of the connected session. (NAT address) 
 
  - Duplicates will be deleted. 
 
 # Usage
-1. Change the folder location (line 167) if desired.
+1. Change the folder location (line 162) if desired.
 1. Log into device and run script from SecureCRT.
-2. You will be prompted for the management interface. (You'll have 3 attempts for input and you can cancel to skip adding MGMT IP to .csv)
-3. You will be prompted for the address. (optional)  
-4. Done. 
+2. You will be prompted for the management interface. (You'll have 3 attempts for input and you can cancel to skip adding MGMT IP to .csv) 
+3. Done. 
